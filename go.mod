@@ -7,7 +7,7 @@ require (
 	github.com/go-sql-driver/mysql v1.7.1
 	github.com/xwb1989/sqlparser v0.0.0-20180606152119-120387863bf2
 	golang.org/x/exp v0.0.0-20230728194245-b0cb94b80691
-	golang.org/x/tools v0.11.0
+	golang.org/x/tools v0.11.1
 	gorm.io/datatypes v1.2.0
 	gorm.io/plugin/soft_delete v1.2.1
 )
