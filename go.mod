@@ -3,7 +3,7 @@ module github.com/things-go/ens
 go 1.20
 
 require (
-	ariga.io/atlas v0.15.0
+	ariga.io/atlas v0.16.0
 	github.com/go-sql-driver/mysql v1.7.1
 	github.com/pingcap/tidb/parser v0.0.0-20230802114738-1e73eee4860c
 	github.com/xwb1989/sqlparser v0.0.0-20180606152119-120387863bf2
@@ -18,12 +18,11 @@ require (
 	github.com/benbjohnson/clock v1.3.5 // indirect
 	github.com/cznic/mathutil v0.0.0-20181122101859-297441e03548 // indirect
 	github.com/go-openapi/inflect v0.19.0 // indirect
-	github.com/google/go-cmp v0.5.9 // indirect
+	github.com/google/go-cmp v0.6.0 // indirect
 	github.com/hashicorp/hcl/v2 v2.17.0 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/kr/pretty v0.3.1 // indirect
-	github.com/kylelemons/godebug v1.1.0 // indirect
 	github.com/mitchellh/go-wordwrap v1.0.1 // indirect
 	github.com/pingcap/errors v0.11.5-0.20221009092201-b66cddb77c32 // indirect
 	github.com/pingcap/failpoint v0.0.0-20220801062533-2eaa32854a6c // indirect
