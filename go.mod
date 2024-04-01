@@ -9,7 +9,7 @@ require (
 	github.com/xwb1989/sqlparser v0.0.0-20180606152119-120387863bf2
 	golang.org/x/tools v0.19.0
 	gorm.io/datatypes v1.2.0
-	gorm.io/gorm v1.25.4
+	gorm.io/gorm v1.25.9
 	gorm.io/plugin/soft_delete v1.2.1
 )
 
