@@ -7,7 +7,7 @@ require (
 	github.com/go-sql-driver/mysql v1.8.1
 	github.com/pingcap/tidb/parser v0.0.0-20231013125129-93a834a6bf8d
 	github.com/xwb1989/sqlparser v0.0.0-20180606152119-120387863bf2
-	golang.org/x/tools v0.20.0
+	golang.org/x/tools v0.21.0
 	gorm.io/datatypes v1.2.0
 	gorm.io/gorm v1.25.10
 	gorm.io/plugin/soft_delete v1.2.1
