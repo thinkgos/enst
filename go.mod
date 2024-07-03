@@ -1,9 +1,10 @@
 module github.com/things-go/ens
 
 go 1.22
+toolchain go1.22.4
 
 require (
-	ariga.io/atlas v0.22.0
+	ariga.io/atlas v0.24.1
 	github.com/go-sql-driver/mysql v1.8.1
 	github.com/pingcap/tidb/parser v0.0.0-20231013125129-93a834a6bf8d
 	github.com/xwb1989/sqlparser v0.0.0-20180606152119-120387863bf2
