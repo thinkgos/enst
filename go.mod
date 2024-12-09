@@ -9,7 +9,7 @@ require (
 	github.com/xwb1989/sqlparser v0.0.0-20180606152119-120387863bf2
 	golang.org/x/tools v0.27.0
 	google.golang.org/protobuf v1.35.2
-	gorm.io/datatypes v1.2.4
+	gorm.io/datatypes v1.2.5
 	gorm.io/gorm v1.25.12
 	gorm.io/plugin/soft_delete v1.2.1
 )
@@ -22,7 +22,7 @@ require (
 	github.com/cznic/mathutil v0.0.0-20181122101859-297441e03548 // indirect
 	github.com/go-openapi/inflect v0.21.0 // indirect
 	github.com/google/go-cmp v0.6.0 // indirect
-	github.com/google/uuid v1.3.0 // indirect
+	github.com/google/uuid v1.6.0 // indirect
 	github.com/hashicorp/hcl/v2 v2.20.1 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
