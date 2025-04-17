@@ -1,4 +1,4 @@
-package ens
+package enst
 
 import (
 	"database/sql"
@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/thinkgos/ens/utils"
+	"github.com/thinkgos/enst/utils"
 	"gorm.io/gorm/schema"
 )
 

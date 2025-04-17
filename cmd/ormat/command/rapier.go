@@ -6,8 +6,8 @@ import (
 	"log/slog"
 
 	"github.com/spf13/cobra"
-	"github.com/thinkgos/ens/rapier"
-	"github.com/thinkgos/ens/utils"
+	"github.com/thinkgos/enst/rapier"
+	"github.com/thinkgos/enst/utils"
 )
 
 type rapierOpt struct {

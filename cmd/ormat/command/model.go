@@ -7,8 +7,7 @@ import (
 	"strings"
 
 	"github.com/spf13/cobra"
-	"github.com/thinkgos/ens"
-	"github.com/thinkgos/ens/utils"
+	"github.com/thinkgos/enst/utils"
 )
 
 type modelOpt struct {
@@ -18,7 +17,7 @@ type modelOpt struct {
 
 	PackageName string // 包名
 
-	ens.Option
+	enst.Option
 	DisableCommentTag bool              // 禁用注释放入tag标签中
 	DisableDocComment bool              // 禁用文档注释
 	CustomFieldIdent  map[string]string // 自定义字段类型, 格式: TableName.ColumnName->Ident
@@ -64,7 +63,7 @@ func newModelCmd() *modelCmd {
 			}
 
 			if root.Merge {
-				g := ens.CodeGen{
+				g := enst.CodeGen{
 					Entities:          schemaes.Entities,
 					ByName:            "ormat",
 					Version:           version,
@@ -85,8 +84,8 @@ func newModelCmd() *modelCmd {
 				slog.Info("👉 " + filename)
 			} else {
 				for _, entity := range schemaes.Entities {
-					g := &ens.CodeGen{
-						Entities:          []*ens.EntityDescriptor{entity},
+					g := &enst.CodeGen{
+						Entities:          []*enst.EntityDescriptor{entity},
 						ByName:            "ormat",
 						Version:           version,
 						PackageName:       packageName,

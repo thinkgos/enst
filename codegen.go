@@ -1,12 +1,12 @@
-package ens
+package enst
 
 import (
 	"bytes"
 	"fmt"
 	"strings"
 
-	"github.com/thinkgos/ens/matcher"
-	"github.com/thinkgos/ens/utils"
+	"github.com/thinkgos/enst/matcher"
+	"github.com/thinkgos/enst/utils"
 	"golang.org/x/tools/imports"
 )
 

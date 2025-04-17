@@ -1,11 +1,11 @@
-package ens
+package enst
 
 import (
 	"reflect"
 	"slices"
 
-	"github.com/thinkgos/ens/rapier"
-	"github.com/thinkgos/ens/utils"
+	"github.com/thinkgos/enst/rapier"
+	"github.com/thinkgos/enst/utils"
 	"google.golang.org/protobuf/reflect/protoreflect"
 )
 

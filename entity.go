@@ -1,10 +1,10 @@
-package ens
+package enst
 
 import (
-	"github.com/thinkgos/ens/proto"
-	"github.com/thinkgos/ens/rapier"
-	"github.com/thinkgos/ens/sqlx"
-	"github.com/thinkgos/ens/utils"
+	"github.com/thinkgos/enst/proto"
+	"github.com/thinkgos/enst/rapier"
+	"github.com/thinkgos/enst/sqlx"
+	"github.com/thinkgos/enst/utils"
 )
 
 // EntityDescriptor Each table corresponds to an EntityDescriptor

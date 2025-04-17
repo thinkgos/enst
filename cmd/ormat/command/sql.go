@@ -4,7 +4,7 @@ import (
 	"log/slog"
 
 	"github.com/spf13/cobra"
-	"github.com/thinkgos/ens/sqlx"
+	"github.com/thinkgos/enst/sqlx"
 )
 
 type sqlOpt struct {

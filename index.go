@@ -1,4 +1,4 @@
-package ens
+package enst
 
 // IndexDescriptor
 type IndexDescriptor struct {

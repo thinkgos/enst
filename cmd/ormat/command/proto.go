@@ -6,8 +6,8 @@ import (
 	"log/slog"
 
 	"github.com/spf13/cobra"
-	"github.com/thinkgos/ens/proto"
-	"github.com/thinkgos/ens/utils"
+	"github.com/thinkgos/enst/proto"
+	"github.com/thinkgos/enst/utils"
 )
 
 type protoOpt struct {

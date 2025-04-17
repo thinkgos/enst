@@ -1,6 +1,6 @@
-package ens
+package enst
 
-import "github.com/thinkgos/ens/utils"
+import "github.com/thinkgos/enst/utils"
 
 type Option struct {
 	EnableInt          bool              `yaml:"enableInt" json:"enableInt"`                   // 使能int8,uint8,int16,uint16,int32,uint32输出为int,uint

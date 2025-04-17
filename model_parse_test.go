@@ -1,4 +1,4 @@
-package ens_test
+package enst_test
 
 import (
 	"database/sql"
@@ -35,11 +35,11 @@ type TestData struct {
 }
 
 // func Test(t *testing.T) {
-// 	entity, _ := ens.ParseModel(TestData{})
+// 	entity, _ := enst.ParseModel(TestData{})
 // 	des := entity.Build(nil)
 // 	g := codegen.
 // 		New(
-// 			[]*ens.EntityDescriptor{des},
+// 			[]*enst.EntityDescriptor{des},
 // 			codegen.WithPackageName("ens"),
 // 		).
 // 		GenRapier("")

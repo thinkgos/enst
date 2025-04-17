@@ -1,8 +1,8 @@
-package ens
+package enst
 
 import (
-	"github.com/thinkgos/ens/proto"
-	"github.com/thinkgos/ens/rapier"
+	"github.com/thinkgos/enst/proto"
+	"github.com/thinkgos/enst/rapier"
 	"google.golang.org/protobuf/reflect/protoreflect"
 )
 

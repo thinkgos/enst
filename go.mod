@@ -1,4 +1,4 @@
-module github.com/thinkgos/ens
+module github.com/thinkgos/enst
 
 go 1.24
 

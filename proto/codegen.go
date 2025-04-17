@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/thinkgos/ens/utils"
+	"github.com/thinkgos/enst/utils"
 	"google.golang.org/protobuf/reflect/protoreflect"
 )
 

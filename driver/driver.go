@@ -7,7 +7,7 @@ import (
 	"sync"
 
 	"ariga.io/atlas/sql/schema"
-	"github.com/thinkgos/ens"
+	"github.com/thinkgos/enst"
 )
 
 const (
@@ -19,7 +19,7 @@ const (
 var drivers sync.Map
 
 type Driver interface {
-	InspectSchema(context.Context, *InspectOption) (*ens.Schema, error)
+	InspectSchema(context.Context, *InspectOption) (*enst.Schema, error)
 }
 
 func RegisterDriver(name string, d Driver) {

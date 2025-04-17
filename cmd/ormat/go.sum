@@ -86,8 +86,6 @@ github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81P
 github.com/stretchr/testify v1.7.0/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/stretchr/testify v1.8.4 h1:CcVxjf3Q8PM0mHUKJCdn+eZZtm5yQwehR5yeSVQQcUk=
 github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
-github.com/thinkgos/ens v1.0.0-rc8 h1:WFSJFEKiZND3PjIf8a4BRqc3J/C/9LNFkPdNbIg9bdw=
-github.com/thinkgos/ens v1.0.0-rc8/go.mod h1:17iVFASIai4S2iHpjdLyx7xf84RM/5lRv2DRb+uVAP0=
 github.com/xwb1989/sqlparser v0.0.0-20180606152119-120387863bf2 h1:zzrxE1FKn5ryBNl9eKOeqQ58Y/Qpo3Q9QNxKHX5uzzQ=
 github.com/xwb1989/sqlparser v0.0.0-20180606152119-120387863bf2/go.mod h1:hzfGeIUDq/j97IG+FhNqkowIyEcD88LrW6fyU3K3WqY=
 github.com/zclconf/go-cty v1.16.2 h1:LAJSwc3v81IRBZyUVQDUdZ7hs3SYs9jv0eZJDWHD/70=

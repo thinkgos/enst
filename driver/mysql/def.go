@@ -5,59 +5,59 @@ import (
 	"regexp"
 
 	"ariga.io/atlas/sql/schema"
-	"github.com/thinkgos/ens"
+	"github.com/thinkgos/enst"
 )
 
 // \b([(]\d+[)])? 匹配0个或1个(\d+)
 var typeDictMatchList = []struct {
 	Key     string
-	NewType func() ens.GoType
+	NewType func() enst.GoType
 }{
-	{`^(bool)`, ens.BoolType},                                 // bool
-	{`^(tinyint)\b[(]1[)] unsigned`, ens.BoolType},            // bool
-	{`^(tinyint)\b[(]1[)]`, ens.BoolType},                     // bool
-	{`^(tinyint)\b([(]\d+[)])? unsigned`, ens.Uint8Type},      // uint8
-	{`^(tinyint)\b([(]\d+[)])?`, ens.Int8Type},                // int8
-	{`^(smallint)\b([(]\d+[)])? unsigned`, ens.Uint16Type},    // uint16
-	{`^(smallint)\b([(]\d+[)])?`, ens.Int16Type},              // int16
-	{`^(mediumint)\b([(]\d+[)])? unsigned`, ens.Uint32Type},   // uint32
-	{`^(mediumint)\b([(]\d+[)])?`, ens.Int32Type},             // int32
-	{`^(int)\b([(]\d+[)])? unsigned`, ens.Uint32Type},         // uint32
-	{`^(int)\b([(]\d+[)])?`, ens.Int32Type},                   // int32
-	{`^(integer)\b([(]\d+[)])? unsigned`, ens.Uint32Type},     // uint32
-	{`^(integer)\b([(]\d+[)])?`, ens.Int32Type},               // int32
-	{`^(bigint)\b([(]\d+[)])? unsigned`, ens.Uint64Type},      // uint64
-	{`^(bigint)\b([(]\d+[)])?`, ens.Int64Type},                // int64
-	{`^(float)\b([(]\d+,\d+[)])? unsigned`, ens.Float32Type},  // float32
-	{`^(float)\b([(]\d+,\d+[)])?`, ens.Float32Type},           // float32
-	{`^(double)\b([(]\d+,\d+[)])? unsigned`, ens.Float64Type}, // float64
-	{`^(double)\b([(]\d+,\d+[)])?`, ens.Float64Type},          // float64
-	{`^(char)\b[(]\d+[)]`, ens.StringType},                    // string
-	{`^(varchar)\b[(]\d+[)]`, ens.StringType},                 // string
-	{`^(datetime)\b([(]\d+[)])?`, ens.TimeType},               // time.Time
-	{`^(date)\b([(]\d+[)])?`, ens.TimeType},                   // datatypes.Date
-	{`^(timestamp)\b([(]\d+[)])?`, ens.TimeType},              // time.Time
-	{`^(time)\b([(]\d+[)])?`, ens.TimeType},                   // time.Time
-	{`^(year)\b([(]\d+[)])?`, ens.TimeType},                   // time.Time
-	{`^(text)\b([(]\d+[)])?`, ens.StringType},                 // string
-	{`^(tinytext)\b([(]\d+[)])?`, ens.StringType},             // string
-	{`^(mediumtext)\b([(]\d+[)])?`, ens.StringType},           // string
-	{`^(longtext)\b([(]\d+[)])?`, ens.StringType},             // string
-	{`^(blob)\b([(]\d+[)])?`, ens.BytesType},                  // []byte
-	{`^(tinyblob)\b([(]\d+[)])?`, ens.BytesType},              // []byte
-	{`^(mediumblob)\b([(]\d+[)])?`, ens.BytesType},            // []byte
-	{`^(longblob)\b([(]\d+[)])?`, ens.BytesType},              // []byte
-	{`^(bit)\b[(]\d+[)]`, ens.BytesType},                      // []uint8
-	{`^(json)\b`, ens.JSONRawMessageType},                     // datatypes.JSON
-	{`^(enum)\b[(](.)+[)]`, ens.StringType},                   // string
-	{`^(set)\b[(](.)+[)]`, ens.StringType},                    // string
-	{`^(decimal)\b[(]\d+,\d+[)]`, ens.DecimalType},            // string
-	{`^(binary)\b[(]\d+[)]`, ens.BytesType},                   // []byte
-	{`^(varbinary)\b[(]\d+[)]`, ens.BytesType},                // []byte
-	{`^(geometry)`, ens.StringType},                           // string
+	{`^(bool)`, enst.BoolType},                                 // bool
+	{`^(tinyint)\b[(]1[)] unsigned`, enst.BoolType},            // bool
+	{`^(tinyint)\b[(]1[)]`, enst.BoolType},                     // bool
+	{`^(tinyint)\b([(]\d+[)])? unsigned`, enst.Uint8Type},      // uint8
+	{`^(tinyint)\b([(]\d+[)])?`, enst.Int8Type},                // int8
+	{`^(smallint)\b([(]\d+[)])? unsigned`, enst.Uint16Type},    // uint16
+	{`^(smallint)\b([(]\d+[)])?`, enst.Int16Type},              // int16
+	{`^(mediumint)\b([(]\d+[)])? unsigned`, enst.Uint32Type},   // uint32
+	{`^(mediumint)\b([(]\d+[)])?`, enst.Int32Type},             // int32
+	{`^(int)\b([(]\d+[)])? unsigned`, enst.Uint32Type},         // uint32
+	{`^(int)\b([(]\d+[)])?`, enst.Int32Type},                   // int32
+	{`^(integer)\b([(]\d+[)])? unsigned`, enst.Uint32Type},     // uint32
+	{`^(integer)\b([(]\d+[)])?`, enst.Int32Type},               // int32
+	{`^(bigint)\b([(]\d+[)])? unsigned`, enst.Uint64Type},      // uint64
+	{`^(bigint)\b([(]\d+[)])?`, enst.Int64Type},                // int64
+	{`^(float)\b([(]\d+,\d+[)])? unsigned`, enst.Float32Type},  // float32
+	{`^(float)\b([(]\d+,\d+[)])?`, enst.Float32Type},           // float32
+	{`^(double)\b([(]\d+,\d+[)])? unsigned`, enst.Float64Type}, // float64
+	{`^(double)\b([(]\d+,\d+[)])?`, enst.Float64Type},          // float64
+	{`^(char)\b[(]\d+[)]`, enst.StringType},                    // string
+	{`^(varchar)\b[(]\d+[)]`, enst.StringType},                 // string
+	{`^(datetime)\b([(]\d+[)])?`, enst.TimeType},               // time.Time
+	{`^(date)\b([(]\d+[)])?`, enst.TimeType},                   // datatypes.Date
+	{`^(timestamp)\b([(]\d+[)])?`, enst.TimeType},              // time.Time
+	{`^(time)\b([(]\d+[)])?`, enst.TimeType},                   // time.Time
+	{`^(year)\b([(]\d+[)])?`, enst.TimeType},                   // time.Time
+	{`^(text)\b([(]\d+[)])?`, enst.StringType},                 // string
+	{`^(tinytext)\b([(]\d+[)])?`, enst.StringType},             // string
+	{`^(mediumtext)\b([(]\d+[)])?`, enst.StringType},           // string
+	{`^(longtext)\b([(]\d+[)])?`, enst.StringType},             // string
+	{`^(blob)\b([(]\d+[)])?`, enst.BytesType},                  // []byte
+	{`^(tinyblob)\b([(]\d+[)])?`, enst.BytesType},              // []byte
+	{`^(mediumblob)\b([(]\d+[)])?`, enst.BytesType},            // []byte
+	{`^(longblob)\b([(]\d+[)])?`, enst.BytesType},              // []byte
+	{`^(bit)\b[(]\d+[)]`, enst.BytesType},                      // []uint8
+	{`^(json)\b`, enst.JSONRawMessageType},                     // datatypes.JSON
+	{`^(enum)\b[(](.)+[)]`, enst.StringType},                   // string
+	{`^(set)\b[(](.)+[)]`, enst.StringType},                    // string
+	{`^(decimal)\b[(]\d+,\d+[)]`, enst.DecimalType},            // string
+	{`^(binary)\b[(]\d+[)]`, enst.BytesType},                   // []byte
+	{`^(varbinary)\b[(]\d+[)]`, enst.BytesType},                // []byte
+	{`^(geometry)`, enst.StringType},                           // string
 }
 
-func intoGoType(columnType string) ens.GoType {
+func intoGoType(columnType string) enst.GoType {
 	for _, v := range typeDictMatchList {
 		ok, _ := regexp.MatchString(v.Key, columnType)
 		if ok {
@@ -71,13 +71,13 @@ type TableDef struct {
 	tb *schema.Table
 }
 
-func NewTableDef(tb *schema.Table) ens.TableDef {
+func NewTableDef(tb *schema.Table) enst.TableDef {
 	return &TableDef{tb: tb}
 }
 
 func (d *TableDef) Table() *schema.Table { return d.tb }
 
-func (d *TableDef) PrimaryKey() ens.IndexDef {
+func (d *TableDef) PrimaryKey() enst.IndexDef {
 	if d.tb.PrimaryKey != nil {
 		return NewIndexDef(d.tb.PrimaryKey)
 	}
@@ -92,7 +92,7 @@ type ColumnDef struct {
 	col *schema.Column
 }
 
-func NewColumnDef(col *schema.Column) ens.ColumnDef {
+func NewColumnDef(col *schema.Column) enst.ColumnDef {
 	return &ColumnDef{col: col}
 }
 
@@ -106,7 +106,7 @@ type IndexDef struct {
 	index *schema.Index
 }
 
-func NewIndexDef(index *schema.Index) ens.IndexDef { return &IndexDef{index: index} }
+func NewIndexDef(index *schema.Index) enst.IndexDef { return &IndexDef{index: index} }
 
 func (d *IndexDef) Index() *schema.Index { return d.index }
 
@@ -116,7 +116,7 @@ type ForeignKeyDef struct {
 	fk *schema.ForeignKey
 }
 
-func NewForeignKey(fk *schema.ForeignKey) ens.ForeignKeyDef {
+func NewForeignKey(fk *schema.ForeignKey) enst.ForeignKeyDef {
 	return &ForeignKeyDef{fk: fk}
 }
 

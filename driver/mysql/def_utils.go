@@ -4,7 +4,7 @@ import (
 	"ariga.io/atlas/sql/mysql"
 	"ariga.io/atlas/sql/schema"
 
-	"github.com/thinkgos/ens/internal/insql"
+	"github.com/thinkgos/enst/internal/insql"
 )
 
 func autoIncrement(attrs []schema.Attr) bool {
