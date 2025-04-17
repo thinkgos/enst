@@ -7,9 +7,9 @@ import (
 	"ariga.io/atlas/sql/mysql"
 	"ariga.io/atlas/sql/schema"
 
-	"github.com/things-go/ens"
-	"github.com/things-go/ens/internal/insql"
-	"github.com/things-go/ens/utils"
+	"github.com/thinkgos/ens"
+	"github.com/thinkgos/ens/internal/insql"
+	"github.com/thinkgos/ens/utils"
 )
 
 func intoColumnSql(col *schema.Column) string {

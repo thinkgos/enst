@@ -7,7 +7,7 @@ import (
 	"sync"
 
 	"ariga.io/atlas/sql/schema"
-	"github.com/things-go/ens"
+	"github.com/thinkgos/ens"
 )
 
 const (

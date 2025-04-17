@@ -1,8 +1,8 @@
 package ens
 
 import (
-	"github.com/things-go/ens/proto"
-	"github.com/things-go/ens/rapier"
+	"github.com/thinkgos/ens/proto"
+	"github.com/thinkgos/ens/rapier"
 	"google.golang.org/protobuf/reflect/protoreflect"
 )
 

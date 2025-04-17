@@ -6,8 +6,8 @@ import (
 	"ariga.io/atlas/sql/schema"
 	"ariga.io/atlas/sql/sqlclient"
 
-	"github.com/things-go/ens"
-	"github.com/things-go/ens/driver"
+	"github.com/thinkgos/ens"
+	"github.com/thinkgos/ens/driver"
 
 	_ "ariga.io/atlas/sql/mysql"
 	_ "github.com/go-sql-driver/mysql"

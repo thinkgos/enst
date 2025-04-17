@@ -7,8 +7,8 @@ import (
 	"strings"
 
 	"github.com/spf13/cobra"
-	"github.com/things-go/ens"
-	"github.com/things-go/ens/utils"
+	"github.com/thinkgos/ens"
+	"github.com/thinkgos/ens/utils"
 )
 
 type modelOpt struct {

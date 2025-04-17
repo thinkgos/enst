@@ -1,4 +1,4 @@
-module github.com/things-go/ens
+module github.com/thinkgos/ens
 
 go 1.24
 

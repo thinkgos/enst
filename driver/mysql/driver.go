@@ -1,7 +1,7 @@
 package mysql
 
 import (
-	"github.com/things-go/ens/driver"
+	"github.com/thinkgos/ens/driver"
 )
 
 func init() {

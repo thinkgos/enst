@@ -4,8 +4,8 @@ import (
 	"reflect"
 	"slices"
 
-	"github.com/things-go/ens/rapier"
-	"github.com/things-go/ens/utils"
+	"github.com/thinkgos/ens/rapier"
+	"github.com/thinkgos/ens/utils"
 	"google.golang.org/protobuf/reflect/protoreflect"
 )
 

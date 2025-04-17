@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/things-go/ens"
-	"github.com/things-go/ens/driver"
-	"github.com/things-go/ens/internal/insql"
+	"github.com/thinkgos/ens"
+	"github.com/thinkgos/ens/driver"
+	"github.com/thinkgos/ens/internal/insql"
 
 	"ariga.io/atlas/sql/mysql"
 	"ariga.io/atlas/sql/schema"

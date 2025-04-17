@@ -9,7 +9,7 @@ database/sql to golang struct, and generate enum annotation from comment to prot
 ### Installation
 
 ```bash
-    go install github.com/things-go/ens/cmd/ormat@latest
+    go install github.com/thinkgos/ens/cmd/ormat@latest
 ```
 
 Example.
@@ -82,7 +82,7 @@ goreleaser release --snapshot  --rm-dist
 
 ormat had been being developed with GoLand under the free JetBrains Open Source license(s) granted by JetBrains s.r.o., hence I would like to express my thanks here.
 
-<a href="https://www.jetbrains.com/?from=things-go/go-modbus" target="_blank"><img src="https://github.com/thinkgos/thinkgos/blob/master/asserts/jetbrains-variant-4.svg" width="200" align="middle"/></a>
+<a href="https://www.jetbrains.com/?from=thinkgos/go-modbus" target="_blank"><img src="https://github.com/thinkgos/thinkgos/blob/master/asserts/jetbrains-variant-4.svg" width="200" align="middle"/></a>
 
 ## License
 

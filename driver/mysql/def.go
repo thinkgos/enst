@@ -5,7 +5,7 @@ import (
 	"regexp"
 
 	"ariga.io/atlas/sql/schema"
-	"github.com/things-go/ens"
+	"github.com/thinkgos/ens"
 )
 
 // \b([(]\d+[)])? 匹配0个或1个(\d+)
@@ -64,7 +64,7 @@ func intoGoType(columnType string) ens.GoType {
 			return v.NewType()
 		}
 	}
-	panic(fmt.Sprintf("type (%v) not match in any way, need to add on (https://github.com/things-go/ormat/blob/main/driver/mysql/def.go)", columnType))
+	panic(fmt.Sprintf("type (%v) not match in any way, need to add on (https://github.com/thinkgos/ormat/blob/main/driver/mysql/def.go)", columnType))
 }
 
 type TableDef struct {

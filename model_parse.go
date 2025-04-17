@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/things-go/ens/utils"
+	"github.com/thinkgos/ens/utils"
 	"gorm.io/gorm/schema"
 )
 

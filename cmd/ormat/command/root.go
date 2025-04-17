@@ -7,7 +7,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	_ "github.com/things-go/ens/driver/mysql"
+	_ "github.com/thinkgos/ens/driver/mysql"
 )
 
 type RootCmd struct {

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/things-go/ens/utils"
+	"github.com/thinkgos/ens/utils"
 	"golang.org/x/tools/imports"
 )
 

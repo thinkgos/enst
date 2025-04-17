@@ -11,8 +11,8 @@ import (
 	"strings"
 
 	"ariga.io/atlas/sql/schema"
-	"github.com/things-go/ens"
-	"github.com/things-go/ens/driver"
+	"github.com/thinkgos/ens"
+	"github.com/thinkgos/ens/driver"
 )
 
 func LoadDriver(URL string) (driver.Driver, error) {

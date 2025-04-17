@@ -1,13 +1,13 @@
-module github.com/things-go/ens/cmd/ormat
+module github.com/thinkgos/ens/cmd/ormat
 
 go 1.24
 
-// replace github.com/things-go/ens => ../..
+// replace github.com/thinkgos/ens => ../..
 
 require (
 	ariga.io/atlas v0.32.0
 	github.com/spf13/cobra v1.9.1
-	github.com/things-go/ens v1.0.0-rc8
+	github.com/thinkgos/ens v1.0.0-rc8
 	gorm.io/driver/sqlite v1.5.7
 	gorm.io/gorm v1.25.12
 )

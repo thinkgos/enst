@@ -1,10 +1,10 @@
 package ens
 
 import (
-	"github.com/things-go/ens/proto"
-	"github.com/things-go/ens/rapier"
-	"github.com/things-go/ens/sqlx"
-	"github.com/things-go/ens/utils"
+	"github.com/thinkgos/ens/proto"
+	"github.com/thinkgos/ens/rapier"
+	"github.com/thinkgos/ens/sqlx"
+	"github.com/thinkgos/ens/utils"
 )
 
 // EntityDescriptor Each table corresponds to an EntityDescriptor

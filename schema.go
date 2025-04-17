@@ -1,9 +1,9 @@
 package ens
 
 import (
-	"github.com/things-go/ens/proto"
-	"github.com/things-go/ens/rapier"
-	"github.com/things-go/ens/sqlx"
+	"github.com/thinkgos/ens/proto"
+	"github.com/thinkgos/ens/rapier"
+	"github.com/thinkgos/ens/sqlx"
 )
 
 // Schema
