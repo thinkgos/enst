@@ -7,6 +7,7 @@ go 1.24
 require (
 	ariga.io/atlas v0.32.0
 	github.com/spf13/cobra v1.9.1
+	github.com/thinkgos/enst v0.0.0-20250417040113-a4d079c9a350
 	gorm.io/driver/sqlite v1.5.7
 	gorm.io/gorm v1.25.12
 )

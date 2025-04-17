@@ -11,6 +11,7 @@ import (
 	"strings"
 
 	"ariga.io/atlas/sql/schema"
+	"github.com/thinkgos/enst"
 	"github.com/thinkgos/enst/driver"
 )
 
