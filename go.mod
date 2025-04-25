@@ -10,7 +10,7 @@ require (
 	golang.org/x/tools v0.32.0
 	google.golang.org/protobuf v1.36.6
 	gorm.io/datatypes v1.2.5
-	gorm.io/gorm v1.25.12
+	gorm.io/gorm v1.26.0
 	gorm.io/plugin/soft_delete v1.2.1
 )
 
