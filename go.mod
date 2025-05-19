@@ -3,7 +3,7 @@ module github.com/thinkgos/enst
 go 1.24
 
 require (
-	ariga.io/atlas v0.32.0
+	ariga.io/atlas v0.33.1
 	github.com/go-sql-driver/mysql v1.9.2
 	github.com/pingcap/tidb/parser v0.0.0-20231013125129-93a834a6bf8d
 	github.com/xwb1989/sqlparser v0.0.0-20180606152119-120387863bf2
@@ -40,6 +40,7 @@ require (
 	golang.org/x/sync v0.13.0 // indirect
 	golang.org/x/text v0.24.0 // indirect
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 	gorm.io/driver/mysql v1.5.7 // indirect
 	gorm.io/driver/sqlite v1.5.2 // indirect
 )
