@@ -2,14 +2,14 @@ module github.com/thinkgos/carp/cmd/ormat
 
 go 1.24
 
-// replace github.com/thinkgos/carp => ../..
+replace github.com/thinkgos/carp => ../..
 
 require (
-	ariga.io/atlas v0.32.0
+	ariga.io/atlas v0.33.1
 	github.com/spf13/cobra v1.9.1
-	github.com/thinkgos/carp v0.0.0-20250417040113-a4d079c9a350
+	github.com/thinkgos/carp v0.0.0-20250521055445-8a5d8d7f8e82
 	gorm.io/driver/sqlite v1.5.7
-	gorm.io/gorm v1.25.12
+	gorm.io/gorm v1.30.0
 )
 
 require (
@@ -41,11 +41,12 @@ require (
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.27.0 // indirect
 	golang.org/x/mod v0.24.0 // indirect
-	golang.org/x/sync v0.13.0 // indirect
-	golang.org/x/text v0.24.0 // indirect
-	golang.org/x/tools v0.32.0 // indirect
+	golang.org/x/sync v0.14.0 // indirect
+	golang.org/x/text v0.25.0 // indirect
+	golang.org/x/tools v0.33.0 // indirect
 	google.golang.org/protobuf v1.36.6 // indirect
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 	gorm.io/datatypes v1.2.5 // indirect
 	gorm.io/driver/mysql v1.5.7 // indirect
 	gorm.io/driver/postgres v1.5.11 // indirect
