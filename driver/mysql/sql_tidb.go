@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/thinkgos/enst"
-	"github.com/thinkgos/enst/driver"
-	"github.com/thinkgos/enst/internal/insql"
+	"github.com/thinkgos/carp"
+	"github.com/thinkgos/carp/driver"
+	"github.com/thinkgos/carp/internal/insql"
 
 	"ariga.io/atlas/sql/mysql"
 	"ariga.io/atlas/sql/schema"
@@ -22,14 +22,14 @@ import (
 type SQLTidb struct{}
 
 // InspectSchema implements driver.Driver.
-func (st *SQLTidb) InspectSchema(_ context.Context, arg *driver.InspectOption) (*enst.Schema, error) {
+func (st *SQLTidb) InspectSchema(_ context.Context, arg *driver.InspectOption) (*carp.Schema, error) {
 	pr := parser.New()
 	stmts, _, err := pr.ParseSQL(arg.Data)
 	if err != nil {
 		return nil, err
 	}
 
-	entities := make([]*enst.EntityDescriptor, 0, len(stmts))
+	entities := make([]*carp.EntityDescriptor, 0, len(stmts))
 	for _, stmt := range stmts {
 		createStmt, ok := stmt.(*ast.CreateTableStmt)
 		if !ok {
@@ -41,7 +41,7 @@ func (st *SQLTidb) InspectSchema(_ context.Context, arg *driver.InspectOption) (
 		}
 		entities = append(entities, intoSchema(table))
 	}
-	return &enst.Schema{
+	return &carp.Schema{
 		Name:     "",
 		Entities: entities,
 	}, nil

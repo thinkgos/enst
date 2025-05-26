@@ -7,9 +7,9 @@ import (
 	"ariga.io/atlas/sql/mysql"
 	"ariga.io/atlas/sql/schema"
 
-	"github.com/thinkgos/enst"
-	"github.com/thinkgos/enst/internal/insql"
-	"github.com/thinkgos/enst/utils"
+	"github.com/thinkgos/carp"
+	"github.com/thinkgos/carp/internal/insql"
+	"github.com/thinkgos/carp/utils"
 )
 
 func intoColumnSql(col *schema.Column) string {
@@ -223,11 +223,11 @@ func intoGormTag(tb *schema.Table, col *schema.Column) string {
 	return b.String()
 }
 
-func intoSchema(tb *schema.Table) *enst.EntityDescriptor {
+func intoSchema(tb *schema.Table) *carp.EntityDescriptor {
 	// * columns
-	fielders := make([]*enst.FieldDescriptor, 0, len(tb.Columns))
+	fielders := make([]*carp.FieldDescriptor, 0, len(tb.Columns))
 	for _, col := range tb.Columns {
-		fielders = append(fielders, &enst.FieldDescriptor{
+		fielders = append(fielders, &carp.FieldDescriptor{
 			ColumnName: col.Name,
 			Comment:    insql.MustComment(col.Attrs),
 			Nullable:   col.Type.Null,
@@ -239,18 +239,18 @@ func intoSchema(tb *schema.Table) *enst.EntityDescriptor {
 		})
 	}
 	// * indexes
-	indexers := make([]*enst.IndexDescriptor, 0, len(tb.Indexes))
+	indexers := make([]*carp.IndexDescriptor, 0, len(tb.Indexes))
 	for _, index := range tb.Indexes {
-		indexers = append(indexers, &enst.IndexDescriptor{
+		indexers = append(indexers, &carp.IndexDescriptor{
 			Name:   index.Name,
 			Fields: insql.IndexPartColumnNames(index.Parts),
 			Index:  NewIndexDef(index),
 		})
 	}
 	//* foreignKeys
-	fks := make([]*enst.ForeignKeyDescriptor, 0, len(tb.ForeignKeys))
+	fks := make([]*carp.ForeignKeyDescriptor, 0, len(tb.ForeignKeys))
 	for _, fk := range tb.ForeignKeys {
-		fks = append(fks, &enst.ForeignKeyDescriptor{
+		fks = append(fks, &carp.ForeignKeyDescriptor{
 			Symbol:     fk.Symbol,
 			Table:      fk.Table.Name,
 			Columns:    insql.ColumnNames(fk.Columns),
@@ -263,7 +263,7 @@ func intoSchema(tb *schema.Table) *enst.EntityDescriptor {
 	}
 
 	// * table
-	return &enst.EntityDescriptor{
+	return &carp.EntityDescriptor{
 		Name:        tb.Name,
 		Comment:     insql.MustComment(tb.Attrs),
 		Table:       NewTableDef(tb),

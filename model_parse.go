@@ -1,4 +1,4 @@
-package enst
+package carp
 
 import (
 	"database/sql"
@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/thinkgos/enst/utils"
+	"github.com/thinkgos/carp/utils"
 	"gorm.io/gorm/schema"
 )
 

@@ -9,9 +9,9 @@ import (
 
 	"ariga.io/atlas/sql/mysql"
 	"ariga.io/atlas/sql/schema"
-	"github.com/thinkgos/enst"
-	"github.com/thinkgos/enst/driver"
-	"github.com/thinkgos/enst/internal/insql"
+	"github.com/thinkgos/carp"
+	"github.com/thinkgos/carp/driver"
+	"github.com/thinkgos/carp/internal/insql"
 	"github.com/xwb1989/sqlparser"
 )
 
@@ -20,14 +20,14 @@ var _ driver.Driver = (*SQL)(nil)
 type SQL struct{}
 
 // InspectSchema implements driver.Driver.
-func (sq *SQL) InspectSchema(ctx context.Context, arg *driver.InspectOption) (*enst.Schema, error) {
+func (sq *SQL) InspectSchema(ctx context.Context, arg *driver.InspectOption) (*carp.Schema, error) {
 	table, err := sq.inspectSchema(ctx, arg)
 	if err != nil {
 		return nil, err
 	}
-	return &enst.Schema{
+	return &carp.Schema{
 		Name:     "",
-		Entities: []*enst.EntityDescriptor{intoSchema(table)},
+		Entities: []*carp.EntityDescriptor{intoSchema(table)},
 	}, nil
 }
 

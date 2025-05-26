@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/thinkgos/enst/driver"
+	"github.com/thinkgos/carp/driver"
 )
 
 func Test_Tidb_SQL_Parse(t *testing.T) {

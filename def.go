@@ -1,4 +1,4 @@
-package enst
+package carp
 
 import "ariga.io/atlas/sql/schema"
 

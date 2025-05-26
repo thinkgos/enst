@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/thinkgos/enst/cmd/ormat/command"
+	"github.com/thinkgos/carp/cmd/ormat/command"
 )
 
 var root = command.NewRootCmd()

@@ -11,8 +11,8 @@ import (
 	"strings"
 
 	"ariga.io/atlas/sql/schema"
-	"github.com/thinkgos/enst"
-	"github.com/thinkgos/enst/driver"
+	"github.com/thinkgos/carp"
+	"github.com/thinkgos/carp/driver"
 )
 
 func LoadDriver(URL string) (driver.Driver, error) {
@@ -37,7 +37,7 @@ type source struct {
 	Exclude []string
 }
 
-func getSchema(c *source) (*enst.Schema, error) {
+func getSchema(c *source) (*carp.Schema, error) {
 	if c.URL != "" {
 		u, err := url.Parse(c.URL)
 		if err != nil {
@@ -68,9 +68,9 @@ func getSchema(c *source) (*enst.Schema, error) {
 		if len(inputFile) == 1 && inputFile[0] == c.InputFile[0] {
 			inputFile = c.InputFile
 		}
-		entities := make([]*enst.EntityDescriptor, 0, 256)
+		entities := make([]*carp.EntityDescriptor, 0, 256)
 		for _, filename := range inputFile {
-			tmpSc, err := func() (*enst.Schema, error) {
+			tmpSc, err := func() (*carp.Schema, error) {
 				content, err := os.ReadFile(filename)
 				if err != nil {
 					return nil, err
@@ -87,7 +87,7 @@ func getSchema(c *source) (*enst.Schema, error) {
 			}
 			entities = append(entities, tmpSc.Entities...)
 		}
-		return &enst.Schema{
+		return &carp.Schema{
 			Name:     "",
 			Entities: entities,
 		}, nil

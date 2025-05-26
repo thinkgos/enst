@@ -9,7 +9,7 @@ database/sql to golang struct, and generate enum annotation from comment to prot
 ### Installation
 
 ```bash
-    go install github.com/thinkgos/enst/cmd/ormat@latest
+    go install github.com/thinkgos/carp/cmd/ormat@latest
 ```
 
 Example.
