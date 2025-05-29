@@ -1,5 +1,5 @@
-ariga.io/atlas v0.33.1 h1:m3rn+m2jkfOZDqdZrgTDvDWh9G3Ldr77IElFDGEwDPk=
-ariga.io/atlas v0.33.1/go.mod h1:WJesu2UCpGQvgUh3oVP94EiRT61nNy1W/VN5g+vqP1I=
+ariga.io/atlas v0.34.0 h1:4hdy+2x+xNs6Lx2anuJ/4Q7lCaqddbEj5CtRDVOBu0M=
+ariga.io/atlas v0.34.0/go.mod h1:WJesu2UCpGQvgUh3oVP94EiRT61nNy1W/VN5g+vqP1I=
 filippo.io/edwards25519 v1.1.0 h1:FNf4tywRC1HmFuKW5xopWpigGjJKiJSV0Cqo0cJWDaA=
 filippo.io/edwards25519 v1.1.0/go.mod h1:BxyFTGdWcka3PhytdK4V28tE5sGfRvvvRV7EaN4VDT4=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
