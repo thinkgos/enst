@@ -5,11 +5,11 @@ go 1.24
 replace github.com/thinkgos/carp => ../..
 
 require (
-	ariga.io/atlas v0.35.0
+	ariga.io/atlas v0.36.1
 	github.com/spf13/cobra v1.9.1
 	github.com/thinkgos/carp v0.0.0-20250521055445-8a5d8d7f8e82
 	gorm.io/driver/sqlite v1.5.7
-	gorm.io/gorm v1.30.0
+	gorm.io/gorm v1.30.1
 )
 
 require (
