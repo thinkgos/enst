@@ -2,12 +2,12 @@ module github.com/thinkgos/carp/cmd/ormat
 
 go 1.24
 
-replace github.com/thinkgos/carp => ../..
+// replace github.com/thinkgos/carp => ../..
 
 require (
 	ariga.io/atlas v0.36.1
 	github.com/spf13/cobra v1.9.1
-	github.com/thinkgos/carp v0.0.0-20250521055445-8a5d8d7f8e82
+	github.com/thinkgos/carp v0.0.0-20250727022335-b06f8ae5ad19
 	gorm.io/driver/sqlite v1.5.7
 	gorm.io/gorm v1.30.1
 )
@@ -42,13 +42,13 @@ require (
 	go.uber.org/zap v1.27.0 // indirect
 	golang.org/x/mod v0.26.0 // indirect
 	golang.org/x/sync v0.16.0 // indirect
-	golang.org/x/text v0.25.0 // indirect
+	golang.org/x/text v0.27.0 // indirect
 	golang.org/x/tools v0.35.0 // indirect
 	google.golang.org/protobuf v1.36.6 // indirect
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	gorm.io/datatypes v1.2.6 // indirect
-	gorm.io/driver/mysql v1.5.7 // indirect
+	gorm.io/driver/mysql v1.6.0 // indirect
 	gorm.io/driver/postgres v1.5.11 // indirect
 	gorm.io/plugin/soft_delete v1.2.1 // indirect
 )
